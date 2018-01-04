@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Blog</title>
+    <description>About Git</description>
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Some basic git command (part 2)</title>
+        <description>
+          
+          Now we continue: Tell Git who you are: git config –global user.name “Sam Smith” or git config –global user.email sam@example.com Status: git status Branches: git checkout -b (branchname) Update from the remote repository: git pull Tags: git tag 1.0.0 (commitID) Undo local changes: git checkout – (filename) Search: git grep...
+        </description>
+        <pubDate>Wed, 04 Jan 2017 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2017-01-04-second-post/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-01-04-second-post/</guid>
+      </item>
+    
+      <item>
+        <title>Some basic git command (part 1)</title>
+        <description>
+          
+          Here is a list of some basic Git commands to get you going with Git; Create a new local repository: git init Check out a repository: git clone /path/to/repository Add files: git add (filename), git add * Commit: git commit -m “Commit message” Push: git push origin master Connect to...
+        </description>
+        <pubDate>Wed, 04 Jan 2017 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2017-01-04-first-post/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-01-04-first-post/</guid>
+      </item>
+    
+  </channel>
+</rss>

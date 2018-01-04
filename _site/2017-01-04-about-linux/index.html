@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Some basic git command (part 1)</title>
+  <title>Some basic linux command</title>
 
   <meta name="author" content="Gx" />
 
@@ -52,19 +52,19 @@
   
 
   
-  <meta property="og:title" content="Some basic git command (part 1)" />
+  <meta property="og:title" content="Some basic linux command" />
   
 
    
-  <meta property="og:description" content="Here is a list of some basic Git commands to get you going with Git; Create a new local repository: git init Check out a repository: git clone /path/to/repository Add files: git add (filename), git add * Commit: git commit -m “Commit message” Push: git push origin master Connect to...">
+  <meta property="og:description" content="1. Command: ls The command “ls” stands for (List Directory Contents), List the contents of the folder, be it file or folder, from which it runs. The command “ls -l” list the content of folder, in long listing fashion. Command “ls -a“, list the content of folder, including hidden files...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/2017-01-04-first-post/" />
-  <link rel="canonical" href="http://localhost:4000/2017-01-04-first-post/" />
+  <meta property="og:url" content="http://localhost:4000/2017-01-04-about-linux/" />
+  <link rel="canonical" href="http://localhost:4000/2017-01-04-about-linux/" />
   
 
   
@@ -78,11 +78,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="Some basic git command (part 1)" />
+  <meta name="twitter:title" content="Some basic linux command" />
   
 
   
-  <meta name="twitter:description" content="Here is a list of some basic Git commands to get you going with Git; Create a new local repository: git init Check out a repository: git clone /path/to/repository Add files: git add (filename), git add * Commit: git commit -m “Commit message” Push: git push origin master Connect to...">
+  <meta name="twitter:description" content="1. Command: ls The command “ls” stands for (List Directory Contents), List the contents of the folder, be it file or folder, from which it runs. The command “ls -l” list the content of folder, in long listing fashion. Command “ls -a“, list the content of folder, including hidden files...">
   
 
   
@@ -157,7 +157,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>Some basic git command (part 1)</h1>
+          <h1>Some basic linux command</h1>
 		  
 		  
 		  
@@ -180,21 +180,84 @@
       
       
       <article role="main" class="blog-post">
-        <p>Here is a list of some basic Git commands to get you going with Git;</p>
+        <h2 id="1-command-ls"><font color="red">1. Command: ls</font></h2>
+<ul>
+  <li>
+    <p>The command “ls” stands for (<em>List Directory Contents</em>), List the contents of the folder, be it file or folder, from which it runs.</p>
+  </li>
+  <li>
+    <p>The command “ls -l” list the content of folder, in long listing fashion.</p>
+  </li>
+  <li>
+    <p>Command “ls -a“, list the content of folder, including hidden files starting with ‘.’.</p>
+  </li>
+</ul>
 
-<p><strong>Create a new local repository:</strong> git init</p>
+<h2 id="2-command-lsblk"><font color="red">2. Command: lsblk</font></h2>
+<ul>
+  <li>
+    <p>The “lsblk” stands for (List Block Devices), print block devices by their assigned name (but not RAM) on the standard output in a tree-like fashion.</p>
+  </li>
+  <li>
+    <p>The “lsblk -l” command list block devices in ‘list‘ structure (not tree like fashion).</p>
+  </li>
+</ul>
 
-<p><strong>Check out a repository:</strong> git clone /path/to/repository</p>
+<h2 id="3-command-cd"><font color="red">3. Command: cd</font></h2>
+<ul>
+  <li>The cd command, also known as chdir (change directory), is a command-line OS shell command used to change the current working directory in operating systems such as Unix, DOS, OS/2, AmigaOS</li>
+</ul>
 
-<p><strong>Add files:</strong> git add (filename),  git add *</p>
+<h2 id="4-command-df"><font color="red">4. Command: df</font></h2>
+<ul>
+  <li>df (abbreviation for disk free) is a standard Unix command used to display the amount of available disk space for file systems on which the invoking user has appropriate read access. df is typically implemented using the statfs or statvfs system calls.</li>
+</ul>
 
-<p><strong>Commit:</strong> git commit -m “Commit message”</p>
+<h2 id="5-command-history"><font color="red">5. Command: history</font></h2>
+<ul>
+  <li>The “history” command stands for History (Event) Record, it prints the history of long list of executed commands in terminal.</li>
+</ul>
 
-<p><strong>Push:</strong> git push origin master</p>
+<h2 id="6-command-sudo"><font color="red">6. Command: sudo</font></h2>
+<ul>
+  <li>The “sudo” (super user do) command allows a permitted user to execute a command as the superuser or another user, as specified by the security policy in the sudoers list.</li>
+</ul>
 
-<p><strong>Connect to a remote repository:</strong> git remote add origin (server)</p>
+<h2 id="7-command-chmod"><font color="red">7. Command: chmod</font></h2>
+<ul>
+  <li>
+    <p>The Linux “chmod” command stands for (change file mode bits). chmod changes the file mode (permission) of each given file, folder, script, etc.. according to mode asked for.</p>
+  </li>
+  <li>
+    <p>Now permission need to be set for 3 kinds of user and usergroup. The first is owner, then usergroup and finally world.</p>
+  </li>
+  <li>
+    <p>Here the root’s permission is rwx (read, write and execute).</p>
+  </li>
+  <li>
+    <p>Read(4), Write(2), Read(1)</p>
+  </li>
+</ul>
 
-<p>For more detail, check out the  <a href="https://www.atlassian.com/git?utm_source=basic-git-commands&amp;utm_medium=link&amp;utm_campaign=git-microsite&amp;_ga=2.153726896.942212570.1514952311-1481458536.1514952311">Atlassian Git Tutorials</a></p>
+<h2 id="8-command-chown"><font color="red">8. Command: chown</font></h2>
+<ul>
+  <li>The Linux “chown” command stands for (change file owner and group). Every file belongs to a group of user and a owner. It is used Do ‘ls -l‘ into your directory and you will see something like this.</li>
+</ul>
+
+<h2 id="9-command-cp"><font color="red">9. Command: cp</font></h2>
+<ul>
+  <li>The “copy” stands for (Copy), it copies a file from one location to another location.</li>
+</ul>
+
+<h2 id="10-command-mv"><font color="red">10. Command: mv</font></h2>
+<ul>
+  <li>The “mv” command moves a file from one location to another location.</li>
+</ul>
+
+<h2 id="11-command-rm"><font color="red">11. Command: rm</font></h2>
+<ul>
+  <li>The “rm” command remove a file at the location.</li>
+</ul>
 
       </article>
 
@@ -211,7 +274,7 @@
 
   
   <!--- Share on Twitter -->
-    <a href="https://twitter.com/intent/tweet?text=Some+basic+git+command+%28part+1%29+http://localhost:4000/2017-01-04-first-post/"
+    <a href="https://twitter.com/intent/tweet?text=Some+basic+linux+command+http://localhost:4000/2017-01-04-about-linux/"
       class="btn btn-social-icon btn-twitter" title="Share on Twitter">
       <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
       <span class="sr-only">Twitter</span>
@@ -220,7 +283,7 @@
 
   
   <!--- Share on Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2017-01-04-first-post/"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2017-01-04-about-linux/"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -231,7 +294,7 @@
 
   
   <!--- Share on LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2017-01-04-first-post/"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2017-01-04-about-linux/"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -246,13 +309,9 @@
 
       <ul class="pager blog-pager">
         
-        <li class="previous">
-          <a href="/2017-01-04-about-linux/" data-toggle="tooltip" data-placement="top" title="Some basic linux command">&larr; Previous Post</a>
-        </li>
-        
         
         <li class="next">
-          <a href="/2017-01-04-second-post/" data-toggle="tooltip" data-placement="top" title="Some basic git command (part 2)">Next Post &rarr;</a>
+          <a href="/2017-01-04-first-post/" data-toggle="tooltip" data-placement="top" title="Some basic git command (part 1)">Next Post &rarr;</a>
         </li>
         
       </ul>

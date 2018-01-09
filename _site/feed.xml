@@ -7,14 +7,25 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Some special things about Ruby</title>
+        <description>
+          
+          Because of learning Java OOP before, I have some comparisons between Ruby and the language I've known:      Similarities: Use Garbage Collection to clean all unused variables Focus on Object Use MVC Use OOP      Differences: Ruby don’t need to compile, it runs directly! To declare a block of codes,...
+        </description>
+        <pubDate>Sun, 07 Jan 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-01-07-something-special-about-ruby/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-01-07-something-special-about-ruby/</guid>
+      </item>
+    
+      <item>
         <title>Some basic git command (part 2)</title>
         <description>
           
           Now we continue: Tell Git who you are: git config –global user.name “Sam Smith” or git config –global user.email sam@example.com Status: git status Branches: git checkout -b (branchname) Update from the remote repository: git pull Tags: git tag 1.0.0 (commitID) Undo local changes: git checkout – (filename) Search: git grep...
         </description>
-        <pubDate>Wed, 04 Jan 2017 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/2017-01-04-second-post/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017-01-04-second-post/</guid>
+        <pubDate>Thu, 04 Jan 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-01-04-second-post/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-01-04-second-post/</guid>
       </item>
     
       <item>
@@ -23,9 +34,9 @@
           
           Here is a list of some basic Git commands to get you going with Git; Create a new local repository: git init Check out a repository: git clone /path/to/repository Add files: git add (filename), git add * Commit: git commit -m “Commit message” Push: git push origin master Connect to...
         </description>
-        <pubDate>Wed, 04 Jan 2017 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/2017-01-04-first-post/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017-01-04-first-post/</guid>
+        <pubDate>Thu, 04 Jan 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-01-04-first-post/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-01-04-first-post/</guid>
       </item>
     
       <item>
@@ -34,9 +45,9 @@
           
           1. Command: ls The command “ls” stands for (List Directory Contents), List the contents of the folder, be it file or folder, from which it runs. The command “ls -l” list the content of folder, in long listing fashion. Command “ls -a“, list the content of folder, including hidden files...
         </description>
-        <pubDate>Wed, 04 Jan 2017 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/2017-01-04-about-linux/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017-01-04-about-linux/</guid>
+        <pubDate>Thu, 04 Jan 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-01-04-about-linux/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-01-04-about-linux/</guid>
       </item>
     
   </channel>

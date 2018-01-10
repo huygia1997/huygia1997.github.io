@@ -7,6 +7,20 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>My report about &quot;Ruby's problems in RubyMonk Primer&quot;</title>
+        <description>
+          
+          This is my Github repo:
+
+ruby-learning 
+
+        </description>
+        <pubDate>Tue, 09 Jan 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-01-09-my-report-primer/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-01-09-my-report-primer/</guid>
+      </item>
+    
+      <item>
         <title>Some special things about Ruby</title>
         <description>
           

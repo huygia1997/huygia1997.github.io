@@ -7,6 +7,50 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Research using Rails for API-only Applications</title>
+        <description>
+          
+          Why Use Rails for JSON APIs? The reason most people use Rails is that it provides a set of defaults that allows developers to get up and running quickly, without having to make a lot of trivial decisions Creating a new application $ rails new my_api –api it will do...
+        </description>
+        <pubDate>Fri, 02 Mar 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-03-02-research-api-only-application/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-03-02-research-api-only-application/</guid>
+      </item>
+    
+      <item>
+        <title>Research debugging</title>
+        <description>
+          
+          3 ways to inspect to contents of variables: debug, to_yaml, inspect (YAML) display content as a hash( pair of key:value) What is the Logger? Rails makes use of the ActiveSupport::Logger class to write log information. Other loggers, such as Log4r, may also be substituted Logs level If you want to...
+        </description>
+        <pubDate>Thu, 01 Mar 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-03-01-research-debugging/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-03-01-research-debugging/</guid>
+      </item>
+    
+      <item>
+        <title>Research catching with rails</title>
+        <description>
+          
+          * Caching means to store content generated during the request-response cycle and to reuse it when responding to similar requests - Caching is often the most effective way to boost an application's performance. By default, caching is only enabled in your production environment. To play around with caching locally you’ll...
+        </description>
+        <pubDate>Thu, 01 Mar 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-03-01-research-catching-with-rails/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-03-01-research-catching-with-rails/</guid>
+      </item>
+    
+      <item>
+        <title>Research assets-pipeline</title>
+        <description>
+          
+          1. What is assets-pipeline it provides the framework to concatenate and minify or compress JS, CSS assets it can also write these assets in other languages and pre-processors such as CoffeeScript, Sass and ERB it is implemented by gem sprockets-rails gem, and is enabled by defaut. *** Fingerprinting technical make...
+        </description>
+        <pubDate>Wed, 28 Feb 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-02-28-research-assets-pipeline/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-02-28-research-assets-pipeline/</guid>
+      </item>
+    
+      <item>
         <title>My report about &quot;Ruby's problems in RubyMonk Primer&quot;</title>
         <description>
           

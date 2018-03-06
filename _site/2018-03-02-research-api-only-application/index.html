@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>My Blog - About Git</title>
+  <title>Research using Rails for API-only Applications</title>
 
   <meta name="author" content="Gx" />
 
-  
-  <meta name="description" content="Something I know about Git, Linux, Ruby,...">
   
 
   <link rel="alternate" type="application/rss+xml" title="My Blog - About Git" href="/feed.xml" />
@@ -54,19 +52,19 @@
   
 
   
-  <meta property="og:title" content="HuyGia's Blog" />
+  <meta property="og:title" content="Research using Rails for API-only Applications" />
   
 
    
-  <meta property="og:description" content="Something I know about Git, Linux, Ruby,...">
+  <meta property="og:description" content="Why Use Rails for JSON APIs? The reason most people use Rails is that it provides a set of defaults that allows developers to get up and running quickly, without having to make a lot of trivial decisions Creating a new application $ rails new my_api –api it will do...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/" />
-  <link rel="canonical" href="http://localhost:4000/" />
+  <meta property="og:url" content="http://localhost:4000/2018-03-02-research-api-only-application/" />
+  <link rel="canonical" href="http://localhost:4000/2018-03-02-research-api-only-application/" />
   
 
   
@@ -80,11 +78,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="HuyGia's Blog" />
+  <meta name="twitter:title" content="Research using Rails for API-only Applications" />
   
 
   
-  <meta name="twitter:description" content="Something I know about Git, Linux, Ruby,...">
+  <meta name="twitter:description" content="Why Use Rails for JSON APIs? The reason most people use Rails is that it provides a set of defaults that allows developers to get up and running quickly, without having to make a lot of trivial decisions Creating a new application $ rails new my_api –api it will do...">
   
 
   
@@ -158,15 +156,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-          <h1>HuyGia's Blog</h1>
-		  
-		    
-            <hr class="small">
-            <span class="page-subheading">Something I know about Git, Linux, Ruby,...</span>
-			
+        <div class="post-heading">
+          <h1>Research using Rails for API-only Applications</h1>
 		  
 		  
+		  
+		  <span class="post-meta">Posted on March 2, 2018</span>
 		  
         </div>
       </div>
@@ -178,183 +173,144 @@
 
 
 
-<div class="container" role="main">
+<div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="posts-list">
-  
-  <article class="post-preview">
-    <a href="/2018-03-02-research-api-only-application/">
-	  <h2 class="post-title">Research using Rails for API-only Applications</h2>
 
-	  
-    </a>
-
-    <p class="post-meta">
-      Posted on March 2, 2018
-    </p>
-
-    <div class="post-entry-container">
       
-      <div class="post-entry">
-        
+      
+      <article role="main" class="blog-post">
+        <h1 style="color: red">
 	Why Use Rails for JSON APIs?
+</h1>
 
+<ul>
+  <li>The reason most people use Rails is that it provides a set of defaults that allows developers to get up and running quickly, without having to make a lot of trivial decisions</li>
+</ul>
 
+<h3 style="color: green">
+	Creating a new application
+</h3>
+<ul>
+  <li>$ rails new my_api –api</li>
+  <li>it will do 3 main things for you:</li>
+  <li>not done</li>
+  <li>not done</li>
+  <li>not done</li>
+</ul>
 
-        
-        
-          <a href="/2018-03-02-research-api-only-application/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
+<h1 style="color: red">
+	Changing an existing application
+</h1>
 
-    
+<ul>
+  <li>In config/application.rb: config.api_only = true</li>
+  <li>In config/environments/development.rb: config.debug_exception_response_format = :default (it will set to :api when config.api_only is ‘true’)</li>
+  <li>inside app/controllers/application_controller.rb:</li>
+</ul>
 
-   </article>
-  
-  <article class="post-preview">
-    <a href="/2018-03-01-research-debugging/">
-	  <h2 class="post-title">Research debugging</h2>
+<p>– class ApplicationController &lt; ActionController::API<br />
+– end</p>
 
-	  
-    </a>
+<h1 style="color: red">
+	Choosing Middleware
+</h1>
+<p>An API application comes with the following middleware by default:</p>
 
-    <p class="post-meta">
-      Posted on March 1, 2018
-    </p>
+<ul>
+  <li>Rack::Sendfile</li>
+  <li>ActionDispatch::Static</li>
+  <li>ActionDispatch::Executor</li>
+  <li>ActiveSupport::Cache::Strategy::LocalCache::Middleware</li>
+  <li>Rack::Runtime</li>
+  <li>ActionDispatch::RequestId</li>
+  <li>ActionDispatch::RemoteIp</li>
+  <li>Rails::Rack::Logger</li>
+  <li>ActionDispatch::ShowExceptions</li>
+  <li>ActionDispatch::DebugExceptions</li>
+  <li>ActionDispatch::Reloader</li>
+  <li>ActionDispatch::Callbacks</li>
+  <li>ActiveRecord::Migration::CheckPending</li>
+  <li>Rack::Head</li>
+  <li>Rack::ConditionalGet</li>
+  <li>Rack::ETag</li>
+  <li>MyApi::Application::Routes</li>
+</ul>
 
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        
-  3 ways to inspect to contents of variables:
-  debug, to_yaml, inspect
-(YAML) display content as a hash( pair of key:value)
+<h3 style="color: green">
+	Using the Cache Middleware
+</h3>
 
-
-
-        
-        
-          <a href="/2018-03-01-research-debugging/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-
-   </article>
-  
-  <article class="post-preview">
-    <a href="/2018-03-01-research-catching-with-rails/">
-	  <h2 class="post-title">Research catching with rails</h2>
-
-	  
-    </a>
-
-    <p class="post-meta">
-      Posted on March 1, 2018
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        
-	* Caching means to store content generated during the request-response cycle and to reuse it when responding to similar requests
-	- Caching is often the most effective way to boost an application's performance. 
-
-
-
-        
-        
-          <a href="/2018-03-01-research-catching-with-rails/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-
-   </article>
-  
-  <article class="post-preview">
-    <a href="/2018-02-28-research-assets-pipeline/">
-	  <h2 class="post-title">Research assets-pipeline</h2>
-
-	  
-    </a>
-
-    <p class="post-meta">
-      Posted on February 28, 2018
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        1. What is assets-pipeline
-
-  it provides the framework to concatenate and minify or compress JS, CSS assets
-  it can also write these assets in other languages and pre-processors such as CoffeeScript, Sass and ERB
-  it is implemented by gem  sprockets-rails gem, and is enabled by defaut.
-
-
-
-        
-        
-          <a href="/2018-02-28-research-assets-pipeline/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-
-   </article>
-  
-  <article class="post-preview">
-    <a href="/2018-01-09-my-report-primer/">
-	  <h2 class="post-title">My report about "Ruby's problems in RubyMonk Primer"</h2>
-
-	  
-    </a>
-
-    <p class="post-meta">
-      Posted on January 9, 2018
-    </p>
-
-    <div class="post-entry-container">
-      
-      <div class="post-entry">
-        This is my Github repo:
-
-
-        
-        
-          <a href="/2018-01-09-my-report-primer/" class="post-read-more">[Read&nbsp;More]</a>
-        
-      </div>
-    </div>
-
-    
-
-   </article>
-  
-</div>
-
-
-<ul class="pager main-pager">
-  
-  
-  <li class="next">
-    <a href="/page2">Older Posts &rarr;</a>
-  </li>
-  
+<ul>
+  <li>using the stale? method: will compare the If-Modified-Since header in the request with @post.updated_at. If the header is newer than the last modified, this action will return a “304 Not Modified” response. Otherwise, it will render the response and include a Last-Modified header in it.</li>
 </ul>
 
 
-	    
+      </article>
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=Research+using+Rails+for+API-only+Applications+http://localhost:4000/2018-03-02-research-api-only-application/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2018-03-02-research-api-only-application/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2018-03-02-research-api-only-application/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2018-03-01-research-debugging/" data-toggle="tooltip" data-placement="top" title="Research debugging">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          
+        </div>
+      
     </div>
   </div>
 </div>
-
 
     <footer>
   <div class="container beautiful-jekyll-footer">

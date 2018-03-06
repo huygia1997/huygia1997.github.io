@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>My report about "Ruby's problems in RubyMonk Primer"</title>
+  <title>Research catching with rails</title>
 
   <meta name="author" content="Gx" />
 
@@ -52,22 +52,19 @@
   
 
   
-  <meta property="og:title" content="My report about "Ruby's problems in RubyMonk Primer"" />
+  <meta property="og:title" content="Research catching with rails" />
   
 
    
-  <meta property="og:description" content="This is my Github repo:
-
-ruby-learning 
-">
+  <meta property="og:description" content="* Caching means to store content generated during the request-response cycle and to reuse it when responding to similar requests - Caching is often the most effective way to boost an application's performance. By default, caching is only enabled in your production environment. To play around with caching locally you’ll...">
   
 
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/2018-01-09-my-report-primer/" />
-  <link rel="canonical" href="http://localhost:4000/2018-01-09-my-report-primer/" />
+  <meta property="og:url" content="http://localhost:4000/2018-03-01-research-catching-with-rails/" />
+  <link rel="canonical" href="http://localhost:4000/2018-03-01-research-catching-with-rails/" />
   
 
   
@@ -81,14 +78,11 @@ ruby-learning
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="My report about "Ruby's problems in RubyMonk Primer"" />
+  <meta name="twitter:title" content="Research catching with rails" />
   
 
   
-  <meta name="twitter:description" content="This is my Github repo:
-
-ruby-learning 
-">
+  <meta name="twitter:description" content="* Caching means to store content generated during the request-response cycle and to reuse it when responding to similar requests - Caching is often the most effective way to boost an application's performance. By default, caching is only enabled in your production environment. To play around with caching locally you’ll...">
   
 
   
@@ -163,11 +157,11 @@ ruby-learning
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>My report about "Ruby's problems in RubyMonk Primer"</h1>
+          <h1>Research catching with rails</h1>
 		  
 		  
 		  
-		  <span class="post-meta">Posted on January 9, 2018</span>
+		  <span class="post-meta">Posted on March 1, 2018</span>
 		  
         </div>
       </div>
@@ -186,9 +180,79 @@ ruby-learning
       
       
       <article role="main" class="blog-post">
-        <h2 id="this-is-my-github-repo">This is my Github repo:</h2>
+        <font color="blue">
+	* Caching means to store content generated during the request-response cycle and to reuse it when responding to similar requests
+	- Caching is often the most effective way to boost an application's performance. 
+</font>
 
-<p><a href="https://github.com/huygia1997/ruby-learning"><strong><font color="red">ruby-learning </font></strong></a></p>
+<p>By default, caching is only enabled in your production environment. To play around with caching locally you’ll want to enable caching in your local environment:  config.action_controller.perform_caching = true</p>
+
+<h1 style="color: red">
+	Fragment Caching
+</h1>
+
+<ul>
+  <li>store cache by variable of components which have same cache characteristic.</li>
+  <li>When different parts of the page need to be cached and expired separately you can use Fragment Caching.</li>
+  <li>Rails uses the timestamp value to make sure it is not serving stale data. If the value of updated_at has changed, a new key will be generated</li>
+</ul>
+
+<h1 style="color: red">
+	Russian Doll Caching
+</h1>
+<ul>
+  <li>You may want to nest cached fragments inside other cached fragments. This is called Russian doll caching</li>
+  <li>Example: cache game nested inside cache company, if any cache game update, the old cache will be expired, but the old company cache will be not expired. =&gt; use touch:true to solve this.</li>
+</ul>
+
+<h1 style="color: red">
+	Low-level caching
+</h1>
+
+<ul>
+  <li>to cache a particular value or query result instead of caching view fragments. Rails’ caching mechanism works great for storing any kind of information.</li>
+  <li>The most efficient way to implement low-level caching is using the Rails.cache.fetch method. This method does both reading and writing to the cache.</li>
+</ul>
+
+<h1 style="color: red">
+	SQL caching
+</h1>
+<ul>
+  <li>cache the result return by sql query. if that query is requested again, the result in cache will be returned =&gt; increase performance</li>
+</ul>
+
+<h1 style="color: red">
+	Cache store
+</h1>
+<p>:namespace - This option can be used to create a namespace within the cache store. It is especially useful if your application shares a cache with other applications.</p>
+
+<p>:compress - This option can be used to indicate that compression should be used in the cache. This can be useful for transferring large cache entries over a slow network.</p>
+
+<p>:compress_threshold - This option is used in conjunction with the :compress option to indicate a threshold under which cache entries should not be compressed. This defaults to 16 kilobytes.</p>
+
+<p>:expires_in - This option sets an expiration time in seconds for the cache entry when it will be automatically removed from the cache.</p>
+
+<h2>* ActiveSupport::Cache::MemoryStore</h2>
+<ul>
+  <li>config.cache_store = :memory_store, { size: 64.megabytes }</li>
+  <li>This cache store keeps entries in memory in the same Ruby process</li>
+  <li>When the cache exceeds the allotted size, a cleanup will occur and the least recently used entries will be removed. (remove cai gan day it dc su dung)</li>
+</ul>
+
+<h2>* ActiveSupport::Cache::FileStore</h2>
+<ul>
+  <li>config.cache_store = :file_store, “/path/to/cache/directory”</li>
+  <li>As the cache will grow until the disk is full, it is recommended to periodically clear out old entries.</li>
+</ul>
+
+<h1 style="color: red">
+	Caching in Development
+</h1>
+<p>$ bin/rails dev:cache<br />
+Development mode is now being cached.<br />
+$ bin/rails dev:cache<br />
+Development mode is no longer being cached.</p>
+
 
       </article>
 
@@ -205,7 +269,7 @@ ruby-learning
 
   
   <!--- Share on Twitter -->
-    <a href="https://twitter.com/intent/tweet?text=My+report+about+%22Ruby%27s+problems+in+RubyMonk+Primer%22+http://localhost:4000/2018-01-09-my-report-primer/"
+    <a href="https://twitter.com/intent/tweet?text=Research+catching+with+rails+http://localhost:4000/2018-03-01-research-catching-with-rails/"
       class="btn btn-social-icon btn-twitter" title="Share on Twitter">
       <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
       <span class="sr-only">Twitter</span>
@@ -214,7 +278,7 @@ ruby-learning
 
   
   <!--- Share on Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2018-01-09-my-report-primer/"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2018-03-01-research-catching-with-rails/"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -225,7 +289,7 @@ ruby-learning
 
   
   <!--- Share on LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2018-01-09-my-report-primer/"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2018-03-01-research-catching-with-rails/"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -241,12 +305,12 @@ ruby-learning
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="/2018-01-07-something-special-about-ruby/" data-toggle="tooltip" data-placement="top" title="Some special things about Ruby">&larr; Previous Post</a>
+          <a href="/2018-02-28-research-assets-pipeline/" data-toggle="tooltip" data-placement="top" title="Research assets-pipeline">&larr; Previous Post</a>
         </li>
         
         
         <li class="next">
-          <a href="/2018-02-28-research-assets-pipeline/" data-toggle="tooltip" data-placement="top" title="Research assets-pipeline">Next Post &rarr;</a>
+          <a href="/2018-03-01-research-debugging/" data-toggle="tooltip" data-placement="top" title="Research debugging">Next Post &rarr;</a>
         </li>
         
       </ul>

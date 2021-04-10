@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Research catching with rails
+title: Research caching with rails
 tags:
 ---
 
@@ -9,7 +9,7 @@ tags:
 	- Caching is often the most effective way to boost an application's performance. 
 </font>
 
- By default, caching is only enabled in your production environment. To play around with caching locally you'll want to enable caching in your local environment:  config.action_controller.perform_caching = true
+By default, caching is only enabled in your production environment. To play around with caching locally you'll want to enable caching in your local environment: config.action_controller.perform_caching = true
 
 <h1 style="color: red">
 	Fragment Caching
@@ -53,7 +53,6 @@ tags:
 - This cache store keeps entries in memory in the same Ruby process
 - When the cache exceeds the allotted size, a cleanup will occur and the least recently used entries will be removed. (remove cai gan day it dc su dung)
 
-
 <h2>* ActiveSupport::Cache::FileStore</h2>
 - config.cache_store = :file_store, "/path/to/cache/directory"
 - As the cache will grow until the disk is full, it is recommended to periodically clear out old entries.
@@ -64,5 +63,4 @@ tags:
 $ bin/rails dev:cache  
 Development mode is now being cached.  
 $ bin/rails dev:cache  
-Development mode is no longer being cached.  
-	
+Development mode is no longer being cached.
